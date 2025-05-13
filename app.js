@@ -46,6 +46,7 @@ app.use("/new", newRouter);
 
 // 404 handler
 app.use((req, res, next) => {
+  console.log("404 for:", req.originalUrl);
   const err = new Error("Page not found");
   err.statusCode = 404;
   next(err); // Pass to error handler
