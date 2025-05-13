@@ -1,24 +1,36 @@
-# Mini message board
+# Mini Message Board
 
-A simple app using Node.js and express, with the help of EJS to create template to render when users make certain GET and POST requests.
+A simple app using Node.js and Express, with EJS templates to render views when users make GET and POST requests.
 
 ## Model
 
-|  Desktop| Mobile |
-| --------| -------|
+| Desktop                                                          | Mobile                                                        |
+| ---------------------------------------------------------------- | ------------------------------------------------------------- |
 | ![Desktop](./public/README-gifs//desktop-mini-message-board.gif) | ![Mobile](./public/README-gifs/mobile-mini-message-board.gif) |
 
 ## Project Highlights:
 
--
+- Users can make POST requests to add their messages to the messages array and display them on the app.
+- Error handling that is user-friendly and prevents the app from breaking.
+- Using `randomUUID()` for each message to help view them individually and `find()` them in the array of messages.
+- Using middleware to store and handle the messages array.
 
 ## Challenges Overcome:
 
--
+- How to pass the array around the app to access it.
+- Error handling correctly throughout the app.
+- Displaying the individual messages.
+- Sending POST requests to the app and handling them.
+- Displaying the Date in the correct format.
 
 ## New Skills Acquired:
 
 - Error handling.
+- Passing an array using middleware.
+- Correctly separating an Express app into view, controller and routes.
+- Using `randomUUID()` to give messages their own ID.
+- Using EJS and templating the whole app.
+- `toDateString()` to format the date.
 
 ## Technologies Used:
 
@@ -39,12 +51,17 @@ To clone this project to your local machine, follow these steps:
    git clone https://github.com/SReddy-96/TOP-mini-message-board.git
    ```
 
-3. Navigate into the project directory.
+3. Navigate into the project directory:
+
    ```bash
    cd TOP-mini-message-board
    ```
-4. Install any dependencies (if applicable) and start the server:
+
+4. Install dependencies and start the server:
+
    ```bash
-   node index.js
+   npm install
+   node app.js
    ```
-5. Open your browser and navigate to http://localhost:8080 (or the port specified in your server file).
+
+5. Open your browser and navigate to `http://localhost:3000` (or the port specified in your .env file).
