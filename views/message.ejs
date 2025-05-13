@@ -1,0 +1,11 @@
+<%- include('components/header', {title: title}) %>
+<main>
+  <div class="showMessage">
+    <h3><%= message.user %></h3>
+    <hr />
+    <p><%= message.text %></p>
+    <p><i class="messageDate"><%= message.added.toDateString() %></i></p>
+  </div>
+  <a class="backLink" href="/">Back to message board</a>
+</main>
+<%- include('components/footer') %>

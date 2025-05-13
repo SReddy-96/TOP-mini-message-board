@@ -1,0 +1,24 @@
+<%- include('components/header', {title: title}) %>
+<main>
+  <h1>New message</h1>
+
+  <form action="/new" method="post" id="form">
+    <input
+      class="userInput"
+      type="text"
+      name="user"
+      placeholder="Your name"
+      required
+    />
+    <textarea
+      rows="4"
+      class="textInput"
+      name="text"
+      placeholder="Your message"
+      required
+    ></textarea>
+    <button class="button-43" type="submit">Add</button>
+    <a class="backLink" href="/">Go Back</a>
+  </form>
+</main>
+<%- include('components/footer') %>

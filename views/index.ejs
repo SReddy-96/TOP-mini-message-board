@@ -1,0 +1,15 @@
+<%- include('components/header', {title: title}) %>
+<main>
+  <h1 id="indexHeader">Messages</h1>
+
+  <% messages.forEach(message => { %>
+  <a href="/message/<%= message.id %>" class="messageLink">
+    <div class="message">
+      <h3><%= message.user %></h3>
+      <p><%= message.text %></p>
+      <p><i class="messageDate"><%= message.added.toDateString() %></i></p>
+    </div>
+  </a>
+  <% }) %>
+</main>
+<%- include('components/footer') %>
