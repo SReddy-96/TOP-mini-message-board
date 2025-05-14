@@ -159,11 +159,20 @@ main {
   max-width: 600px;
 }
 
+.messageText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
 .showMessage {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-top: 2rem;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 .backLink {
