@@ -65,3 +65,20 @@ To clone this project to your local machine, follow these steps:
    ```
 
 5. Open your browser and navigate to `http://localhost:3000` (or the port specified in your .env file).
+
+## Database Integration
+
+Following the initial project, I enhanced the application by replacing the in-memory messages array with a PostgreSQL database. Environment variables are managed through a `.env` file in development, while using Render's PostgreSQL service in production with equivalent variables.
+
+**The upgrade presented several challenges:**
+
+- Creating scripts to populate both development and production databases
+- Implementing database queries and controllers
+- Integrating database results with the view layer
+
+**Key learnings included:**
+
+- The importance of securing sensitive information using environment variables
+- Proper configuration of connection pools for database management
+- Creating and testing database population scripts
+- Setting up and deploying to Render's production environment
