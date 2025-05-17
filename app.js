@@ -18,28 +18,6 @@ app.set("view engine", "ejs");
 // Middleware to parse incoming request bodies
 app.use(express.urlencoded({ extended: true }));
 
-// messages array
-const messages = [
-  {
-    id: randomUUID(),
-    text: "Hi there!",
-    user: "Amando",
-    added: new Date(),
-  },
-  {
-    id: randomUUID(),
-    text: "Hello World!",
-    user: "Charles",
-    added: new Date(),
-  },
-];
-
-// Middleware to have the messages array available in all views
-app.use((req, res, next) => {
-  req.messages = messages;
-  next(); // Important: Call next() to pass control to the next middleware or route handler
-});
-
 // Routes
 app.use("/", indexRouter);
 app.use("/new", newRouter);
